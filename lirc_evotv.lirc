@@ -1,0 +1,75 @@
+# Please take the time to finish this file as described in
+# https://sourceforge.net/p/lirc-remotes/wiki/Checklist/
+# and make it available to others by sending it to
+# <lirc@bartelmus.de>
+#
+# This config file was automatically generated
+# using lirc-0.10.1(default) on Sun Jan 26 13:34:34 2020
+# Command line used: /home/pi/lircd.conf
+# Kernel version (uname -r): 4.19.93+
+#
+# Remote name (as of config file): evotv
+# Brand of remote device, the thing you hold in your hand:
+# Remote device model nr:
+# Remote device info url:
+# Does remote device has a bundled capture device e. g., a
+#     usb dongle? :
+# For bundled USB devices: usb vendor id, product id
+#     and device string (use dmesg or lsusb):
+# Type of device controlled
+#     (TV, VCR, Audio, DVD, Satellite, Cable, HTPC, ...) :
+# Device(s) controlled by this remote:
+
+begin remote
+
+  name  evotv
+  bits           32
+  flags SPACE_ENC|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  header       9142  4317
+  one           709  1560
+  zero          709   418
+  ptrail        695
+  repeat       9139  2121
+  gap          108525
+  toggle_bit_mask 0x0
+  frequency    38000
+
+      begin codes
+          KEY_POWER                0x00FF50AF 0xA873DA00
+          KEY_MUTE                 0x00FF9867 0xA873DA00
+          KEY_1                    0x00FF807F 0xA873DA00
+          KEY_2                    0x00FF40BF 0xA873DA00
+          KEY_3                    0x00FFC03F 0xA873DA00
+          KEY_4                    0x00FF20DF 0xA873DA00
+          KEY_5                    0x00FFA05F 0xA873DA00
+          KEY_6                    0x00FF609F 0xA873DA00
+          KEY_7                    0x00FFE01F 0xA873DA00
+          KEY_8                    0x00FF10EF 0xA873DA00
+          KEY_9                    0x00FF906F 0xA873DA00
+          KEY_0                    0x00FF00FF 0xA873DA00
+          KEY_VOLUMEUP             0x00FF827D 0xA873DA00
+          KEY_VOLUMEDOWN           0x00FF42BD 0xA873DA00
+          KEY_CHANNELUP            0x00FFA857 0xA873DA00
+          KEY_CHANNELDOWN          0x00FF18E7 0xA873DA00
+          KEY_INFO                 0x00FFD827 0xA873DA00
+          KEY_LEFT                 0x00FF8877 0xA873DA00
+          KEY_UP                   0x00FFD02F 0xA873DA00
+          KEY_RIGHT                0x00FF08F7 0xA873DA00
+          KEY_DOWN                 0x00FF708F 0xA873DA00
+          KEY_OK                   0x00FFB04F 0xA873DA00
+          KEY_MENU                 0x00FF6897 0xA873DA00
+          KEY_TV                   0x00FFA25D 0xA873DA00
+          KEY_EXIT                 0x00FFF807 0xA873DA00
+          KEY_FAVORITES            0x00FF38C7 0xA873DA00
+          KEY_AUDIO                0x00FF22DD 0xA873DA00
+          KEY_MESSENGER            0x00FF30CF 0xA873DA00
+          KEY_EPG                  0x00FF58A7 0xA873DA00
+          KEY_TEXT                 0x00FFE817 0xA873DA00
+          KEY_SUBTITLE             0x00FFB847 0xA873DA00
+          KEY_V                    0x00FF28D7 0xA873DA00
+      end codes
+
+end remote
